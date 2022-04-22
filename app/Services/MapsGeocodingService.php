@@ -100,5 +100,7 @@ class MapsGeocodingService
                 ]
             );
         }
+
+        return [];
     }
 }

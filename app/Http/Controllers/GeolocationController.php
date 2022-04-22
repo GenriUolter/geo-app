@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\GeolocationAddressesRequest;
+use App\Http\Requests\GeolocationStreetsRequest;
 use App\Services\GeolocationService;
 use Illuminate\Http\JsonResponse;
 
@@ -15,7 +15,7 @@ class GeolocationController extends Controller
         $this->geolocationService = $geolocationService;
     }
 
-    public function show(GeolocationAddressesRequest $geolocationAddressesRequest): JsonResponse
+    public function show(GeolocationStreetsRequest $geolocationAddressesRequest): JsonResponse
     {
         $streets = $this->geolocationService->streetsByCoordinates($geolocationAddressesRequest->validated());
 
